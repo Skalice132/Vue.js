@@ -8,10 +8,10 @@
 <body>
 
 <div id="app">
-    <span @mouseover="changeText">Нажми на меня</span>
-    <p>{{ title }}</p>
-    <p :class="styleCSS">Цвет: {{ styleCSS }}</p>
-    <input type="text" @input="styleCSS = $event.target.value">
+    <input type="text" @input="increment ($event.target.value)">
+    <p>{{ value }}</p>
+    <p>{{ doubleValue }}</p>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>

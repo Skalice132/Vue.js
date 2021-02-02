@@ -8,9 +8,13 @@
 <body>
 
 <div id="app">
-    <input type="text" @input="increment ($event.target.value)">
-    <p>{{ value }}</p>
-    <p>{{ doubleValue }}</p>
+    <button v-on:click="show = !show"> Скрыть / Показать </button>
+    <p v-if="show">Текст, который может стать невидимый</p>
+    <p v-else>Запасной текст</p>
+
+    <ul>
+        <li v-for="(car, i) in cars">{{ i+1 }} - {{ car.model }}, speed {{ car.speed }}</li>
+    </ul>
 
 </div>
 
